@@ -164,6 +164,7 @@ header img.logo{
 input {
     display: block;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 /*input:invalid, textarea:invalid { 
@@ -342,7 +343,9 @@ footer .social img{
         margin-right: 20px;
         font-size: 24px;
     }
-
+    button{
+        padding: 125px;
+    }
 
 }
 

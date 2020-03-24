@@ -73,25 +73,27 @@
                     <br>
                     <br>
                 </div>
- <div class="col-12 col-md-9">
-                <h3>Список составленных счетов:</h3><br>
-                        <select class="form-control" name=accountId"  size="3">
-                            <c:forEach var="account" items="${listAccounts}" varStatus="status">
-                                <option value="${account.id}">
-                                <ol>
+                <div class="col-12 col-md-9">
+                    <h3>Список составленных счетов:</h3>
+                    <select class="form-control" name=accountId"  size="3">
+                        <c:forEach var="account" items="${listAccounts}" varStatus="status">
+                            <option value="${account.id}">
+                            <ol>
                                 <li>${account.number}. ${account.title}. ${account.author}. ${account.year}. ${account.month}. ${account.total}</li>  
-                                </ol>
-                                </option>
+                            </ol>
+                            </option>
 
-                            </c:forEach>
-                        </select>
-                
-                <h3>Список оплаченных счетов:</h3><br>
-                    <c:if test="${listHistories == null}">
-                        <p>Нет оплаченных счетов!</p>
-                    </c:if>
-                    <c:if test="${listHistories != null}">
-                        <select class="form-control" name="historyId"  size="3">
+                        </c:forEach>
+                    </select>
+
+
+                    <h3> Список оплаченных счетов:</h3>
+                    <select class="form-control" name=historyId"  size="3">
+                        <c:if test="${listHistories == null}">
+                            <p>Нет оплаченных счетов!</p>
+                        </c:if>
+                        <c:if test="${listHistories != null}">
+
                             <c:forEach var="history" items="${listHistories}" varStatus="status">
                                 <option value="${history.id}">
                                 <ol>
@@ -103,8 +105,13 @@
                             </c:forEach>
                         </select>
                     </c:if>
- </div>
-        
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>  
+
         <footer>
             <div class="container">
                 <div class="row align-items-center">

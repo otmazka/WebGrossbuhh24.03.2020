@@ -83,8 +83,9 @@
                         Год: <input type="text" name="year"><br>
                         Месяц: <input type="text" name="month"><br>
                         Итого: <input type="text" name="total"><br>
-                         <button type="submit" class="btn btn-primary">Создать счёт</button>
+                        <button type="submit" class="btn btn-primary">Создать счёт</button>
                     </form>
+                    <br>
 
                 </div>
             </div>

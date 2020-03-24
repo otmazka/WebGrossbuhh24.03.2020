@@ -80,6 +80,16 @@
                 <div class="col-12 col-md-4 ml-auto">
                         <p>${info}</p>
                     <form action="takeOnAccount" method="POST">
+                        
+                        <h3>Список компаний</h3>
+             <select class="form-control" name="companyId">
+                <c:forEach var="company" items="${listCompanies}" varStatus="status">
+                    <option value="${company.id}">
+                        ${status.index+1}) ${company.name}. ${company.form}. ${company.address}. ${company.email}
+                        
+                    </option>                          
+                </c:forEach>
+             </select>
             <h3>Список счетов</h3> 
             <select class="form-control" name="accountId">
                 <c:forEach var="account" items="${listAccounts}" varStatus="status">
@@ -88,16 +98,8 @@
                     </option>                          
                 </c:forEach>
             </select>
-            <h3>Список компаний</h3>
-             <select class="form-control" name="companyId">
-                <c:forEach var="company" items="${listCompanies}" varStatus="status">
-                    <option value="${company.id}">
-                        ${status.index+1}) ${company.name}. ${company.form}. ${company.address}. ${company.email}
-                        
-                    </option>                          
-                </c:forEach>
-             </select><br>
-            <input type="submit" class="btn btn-primary" value="оплатить счёт">
+            <br>
+            <input type="submit" class="btn btn-primary " value="оплатить счёт">
                     </form><br>
                    
                 </div>
