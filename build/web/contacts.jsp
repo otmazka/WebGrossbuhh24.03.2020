@@ -64,57 +64,72 @@
         </section>
 
         <section class="page contact">
-             <div class="container-fluid">
-                <div class="row">
-                    <div class="col map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.9905163919852!2d28.178397316074488!3d59.38318538167774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e1ce95069b%3A0xc04b5daf1181eb21!2sKangelaste+9!5e0!3m2!1sru!2see!4v1557915350794!5m2!1sru!2see" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div> 
+    <div class="container">
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-lg-8 mb-4">
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.9905163919852!2d28.178397316074488!3d59.38318538167774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e1ce95069b%3A0xc04b5daf1181eb21!2sKangelaste+9!5e0!3m2!1sru!2see!4v1557915350794!5m2!1sru!2see" width="800" height="450" frameborder="0" style="border:0"></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-lg-4 mb-4 d-flex flex-column justify-content-center">
+                <h2>Контактные данные</h2>
+                <div class="address">
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+37255613771">+372 5561 3771</a></p>
+                    <p><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com">example@mail.com</a></p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Нарва, Кангеласте 9</p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> пн-пт: 10:00 - 11:00</p>
                 </div>
             </div>
-            <div class="container">
+        </div>
 
-                <div class="row mb-5">
-                    <div class="col-md-6 d-flex flex-column">
-                        <h2>Контактные данные</h2>
-                        <div class="address">
-                            <p><i class="fa fa-phone" aria-hidden="true"></i> +372 55613771</p>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> perfectpluss@mail.ru</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Kangelaste prospekt 9-50, Narva</p>
-                        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
+                <h3>Обратная связь</h3>
+
+                                <form method="post">
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="userName">Имя</label>
+
+                            <input type="text" name="name" class="form-control" id="userName" placeholder="Ваше имя" required
+                                   pattern="[a-zA-Zа-яА-Я]+" minlength="2" maxlength="50">
+
+                            <span class="form__error">Это поле должно не менее 2-х и не более 50 букв</span>
+                                                    </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="email">Email адрес</label>
+
+                            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                                                    </div>
+
+
+                        <div class="col-sm-12 col-md-4 mb-3">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Мобильный №" required
+                                   pattern="[\+372]{4}\d{7,8}" 
+                                   minlength="11" maxlength="12">
+                            <span class="form__error">Это поле должно содержать телефон в формате +37234567890</span>
+                                                    </div>
                     </div>
-                    <div class="col-md-6">
-                        <h2>Обратная связь</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="userName">Имя</label>
-                                <input type="text" class="form-control" id="userName" placeholder="Ваше имя" required>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="email">Email адрес</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                            </div>
+                    <div class="form-group">
+                        <label for="msg">Сообщение</label>
+                        <textarea name="msg" class="form-control" id="msg" rows="3"  placeholder="Ваше сообщение" required></textarea>
+                                            </div>
 
-
-                            <div class="form-group">
-                                <label for="phone">Телефон</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="+372">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="msg">Сообщение</label>
-                                <textarea class="form-control" id="msg" rows="3"  placeholder="Ваше сообщение" required ></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-outline-primary">Отправить</button>
-                        </form>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-outline-primary">Отправить</button>
+                </form>
 
             </div>
-              
-        </section>
+            <div class="col-sm-12 col-lg-8 d-none" id="ok">
+                <div class="alert alert-success py-3" role="alert">
+                    Ваше сообщение отправлено.
+                </div>
+            </div>
+        </div>
+</section>
 
 
         <footer>
